@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Awesome Dashboard</title>
 </head>
 
 <body>
     <div class="sidebar">
-        <div class="logo">
-            <div class="icon"></div>
-            <div class="text">Dashboard</div>
+        <div>
+            <div class="logo">
+                <div class="icon"></div>
+                <div class="text">Dashboard</div>
+            </div>
         </div>
-        <div class="main-menu">
+        <div class="menu">
             <ul>
                 <li>
                     <div class="menu-item">
@@ -53,7 +56,7 @@
                 </li>
             </ul>
         </div>
-        <div class="extra-menu">
+        <div class="menu">
             <ul>
                 <li>
                     <div class="menu-item">
@@ -79,110 +82,132 @@
     <div class="header">
         <div class="top">
             <div class="search-bar">
+                <img />
                 <input type="text">
             </div>
-            <div>Notifications</div>
-            <div>Avatar</div>
-            <div class="user-name">Username</div>
+            <img />
+            <img class="top-avatar" />
+            <div class="user-name">Olga</div>
         </div>
-        <div class="main">
+        <div class="user">
             <div class="user-card">
-                <div>Avatar</div>
-                <div>Hi there,</div>
-                <div>Username (@user)</div>
+                <img />
+                <div>
+                    <div class="hello">Hi there,</div>
+                    <div>Olga (@olga-007)</div>
+                </div>
             </div>
-            <div class="actions">
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
-            </div>
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
         </div>
     </div>
     <div class="main">
-        <div class="section">
+        <div class="section projects">
             <div class="title">Your Projects</div>
             <div class="content">
-                <div class="project">
-                    <div class="title">Super Cool Project</div>
-                    <div>Eu nisl nunc mi ipsum faucibus vitae aliquet. Morbi non arcu risus quis varius quam quisque.
+                <div class="card">
+                    <div class="project-desc">
+                        <div class="title">Super Cool Project</div>
+                        <div>Eu nisl nunc mi ipsum faucibus vitae aliquet. Morbi non arcu risus quis varius quam
+                            quisque.</div>
                     </div>
-                    <div class="links"></div>
+                    <div class="project-links"></div>
                 </div>
-                <div class="project">
-                    <div class="title">Less Cool Project</div>
-                    <div>Enim tortor at auctor urna nunc. Semper auctor neque vitae tempus quam pellentesque nec. Arcu
-                        risus quis varius quam quisque id diam.</div>
-                    <div class="links"></div>
+                <div class="card">
+                    <div class="project-desc">
+                        <div class="title">Less Cool Project</div>
+                        <div>Enim tortor at auctor urna nunc. Semper auctor neque vitae tempus quam pellentesque nec.
+                            Arcu risus quis varius quam quisque id diam.</div>
+                    </div>
+                    <div class="project-links"></div>
                 </div>
-                <div class="project">
-                    <div class="title">Impossible App</div>
-                    <div>Duis at consectetur lorem donec massa sapien faucibus.</div>
-                    <div class="links"></div>
+                <div class="card">
+                    <div class="project-desc">
+                        <div class="title">Impossible App</div>
+                        <div>Duis at consectetur lorem donec massa sapien faucibus.</div>
+                    </div>
+                    <div class="project-links"></div>
                 </div>
-                <div class="project">
-                    <div class="title">Easy-Peasy App</div>
-                    <div>Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.</div>
-                    <div class="links"></div>
+                <div class="card">
+                    <div class="project-desc">
+                        <div class="title">Easy-Peasy App</div>
+                        <div>Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.</div>
+                    </div>
+                    <div class="project-links"></div>
                 </div>
-                <div class="project">
-                    <div class="title">Ad Blocker</div>
-                    <div>Morbi tristique senectus et netus et malesuada fames ac turpis. At auctor urna nunc id.</div>
-                    <div class="links"></div>
+                <div class="card">
+                    <div class="project-desc">
+                        <div class="title">Ad Blocker</div>
+                        <div>Morbi tristique senectus et netus et malesuada fames ac turpis. At auctor urna nunc id.
+                        </div>
+                    </div>
+                    <div class="project-links"></div>
                 </div>
-                <div class="project">
-                    <div class="title">Money Maker</div>
-                    <div>Turpis egestas pretium aenean pharetra magna. Id aliquet risus feugiat in ante metus dictum at.
-                        Pretium lectus quam id leo in vitae.</div>
-                    <div class="links"></div>
+                <div class="card">
+                    <div class="project-desc">
+                        <div class="title">Money Maker</div>
+                        <div>Turpis egestas pretium aenean pharetra magna. Id aliquet risus feugiat in ante metus dictum
+                            at. Pretium lectus quam id leo in vitae.</div>
+                    </div>
+                    <div class="project-links"></div>
                 </div>
             </div>
         </div>
         <div class="section">
             <div class="title">Announcements</div>
-            <div class="content">
+            <div class="card">
                 <div class="entry">
                     <div class="title">Site Maintenance</div>
-                    <div>Malesuada fames ac turpis egestas sed. Augue eget arcu dictum varius duis at consectetur lorem.
-                        Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Nulla facilisi etiam
-                        dignissim diam quis enim lobortis scelerisque. </div>
+                    <div class="line-clamp">Malesuada fames ac turpis egestas sed. Augue eget arcu dictum varius duis at
+                        consectetur lorem. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Nulla
+                        facilisi etiam dignissim diam quis enim lobortis scelerisque. </div>
                 </div>
                 <div class="entry">
                     <div class="title">Community Share Day</div>
-                    <div>Cras tincidunt lobortis feugiat vivamus. Suspendisse potenti nullam ac tortor vitae purus
-                        faucibus ornare. Eu nisl nunc mi ipsum faucibus vitae aliquet. Morbi non arcu risus quis varius
-                        quam quisque. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum. Eget
-                        gravida cum sociis natoque penatibus et magnis dis parturient.</div>
+                    <div class="line-clamp">Cras tincidunt lobortis feugiat vivamus. Suspendisse potenti nullam ac
+                        tortor vitae purus faucibus ornare. Eu nisl nunc mi ipsum faucibus vitae aliquet. Morbi non arcu
+                        risus quis varius quam quisque. Facilisi etiam dignissim diam quis enim lobortis scelerisque
+                        fermentum. Eget gravida cum sociis natoque penatibus et magnis dis parturient.</div>
                 </div>
                 <div class="entry">
                     <div class="title">Updated Privacy Policy</div>
-                    <div>Elit eget gravida cum sociis natoque. Metus dictum at tempor commodo ullamcorper a lacus. Et
-                        magnis dis parturient montes nascetur ridiculus. Libero volutpat sed cras ornare arcu. Proin sed
-                        libero enim sed faucibus. Enim tortor at auctor urna nunc.</div>
+                    <div class="line-clamp">Elit eget gravida cum sociis natoque. Metus dictum at tempor commodo
+                        ullamcorper a lacus. Et magnis dis parturient montes nascetur ridiculus. Libero volutpat sed
+                        cras ornare arcu. Proin sed libero enim sed faucibus. Enim tortor at auctor urna nunc.</div>
                 </div>
             </div>
         </div>
         <div class="section">
             <div class="title">Trending</div>
-            <div class="content">
+            <div class="card">
                 <div class="trend">
-                    <div>Avatar1</div>
-                    <div class="title">@user1</div>
-                    <div>World Peace Builder</div>
+                    <img />
+                    <div>
+                        <div class="title">@user1</div>
+                        <div>World Peace Builder</div>
+                    </div>
                 </div>
                 <div class="trend">
-                    <div>Avatar2</div>
-                    <div class="title">@user2</div>
-                    <div>Super Cool Project</div>
+                    <img />
+                    <div>
+                        <div class="title">@user2</div>
+                        <div>Super Cool Project</div>
+                    </div>
                 </div>
                 <div class="trend">
-                    <div>Avatar3</div>
-                    <div class="title">@user3</div>
-                    <div>Life-Changing App</div>
+                    <img />
+                    <div>
+                        <div class="title">@user3</div>
+                        <div>Life-Changing App</div>
+                    </div>
                 </div>
                 <div class="trend">
-                    <div>Avatar4</div>
-                    <div class="title">@user4</div>
-                    <div>No Traffic Maker</div>
+                    <img />
+                    <div>
+                        <div class="title">@user4</div>
+                        <div>No Traffic Maker</div>
+                    </div>
                 </div>
             </div>
         </div>
