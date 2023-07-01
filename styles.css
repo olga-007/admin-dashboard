@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+img {
+    display: block;
+}
+
 body {
     font-family: Roboto, Helvetica, Arial, sans-serif;
     height: 100vh;
@@ -22,17 +26,41 @@ body {
     background-color: rgb(25, 146, 212);
     font-size: 20px;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 5px 15px;
 }
 
 .sidebar>* {
-    padding: 10px 0;
+    padding: 15px 0;
+}
+
+.logo,
+.menu-item {
+    display: grid;
+    grid-template-columns: 48px minmax(150px, 1fr);
+    align-items: center;
+    gap: 10px;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
-    margin: 0 20px;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+}
+
+.menu-item {
+    height: 32px;
+}
+
+.menu-item img {
+    width: 24px;
+    height: 24px;
+    align-self: auto;
+    justify-self: center;
+    margin-bottom: 3px;
 }
 
 ul {
@@ -40,7 +68,18 @@ ul {
 }
 
 li {
-    margin: 20px;
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    transition: font-size .2s ease;
+}
+
+.menu a:hover {
+    font-size: 23px;
+    transition: font-size .1s ease;
 }
 
 .header {
@@ -183,7 +222,7 @@ button {
 
 body>*>*>* {
     border: 1px solid orange;
-} 
+}
 
 body>*>*>*>* {
     border: 1px solid blue;
@@ -191,4 +230,8 @@ body>*>*>*>* {
 
 body>*>*>*>*>* {
     border: 1px solid aqua;
-}  */
+} 
+
+body>*>*>*>*>*>* {
+    border: 1px solid yellow;
+} */
