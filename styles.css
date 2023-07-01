@@ -13,6 +13,11 @@ img {
     display: block;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     font-family: Roboto, Helvetica, Arial, sans-serif;
     height: 100vh;
@@ -27,10 +32,10 @@ body {
     font-size: 20px;
     font-weight: bold;
     padding: 5px 15px;
-}
 
-.sidebar>* {
-    padding: 15px 0;
+    &>* {
+        padding: 15px 0;
+    }
 }
 
 .logo,
@@ -44,56 +49,54 @@ body {
 .logo {
     font-size: 26px;
     font-weight: bold;
-}
 
-.logo img {
-    width: 48px;
-    height: 48px;
-}
-
-.menu-item {
-    height: 32px;
-}
-
-.menu-item img {
-    width: 24px;
-    height: 24px;
-    align-self: auto;
-    justify-self: center;
-    margin-bottom: 3px;
+    & img {
+        width: 48px;
+        height: 48px;
+    }
 }
 
 ul {
     list-style-type: none;
+
+    & li {
+        margin: 15px 0;
+    }
 }
 
-li {
-    margin: 15px 0;
-}
+.menu-item {
+    height: 32px;
 
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    transition: font-size .2s ease;
-}
+    & img {
+        width: 24px;
+        height: 24px;
+        align-self: auto;
+        justify-self: center;
+        margin-bottom: 3px;
+    }
 
-.menu a:hover {
-    font-size: 23px;
-    transition: font-size .1s ease;
+    & a {
+        transition: font-size .2s ease;
+    }
+    
+    & a:hover {
+        font-size: 23px;
+        transition: font-size .1s ease;
+    }
 }
 
 .header {
     padding: 10px 20px;
-}
 
-.header>* {
-    padding: 10px 20px;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr auto auto auto;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+    &>* {
+        padding: 10px 20px;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr auto auto auto;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
 }
 
 .top img {
@@ -108,11 +111,11 @@ li {
     justify-content: start;
     align-items: center;
     gap: 10px;
-}
 
-.search-bar input {
-    height: 25px;
-    background-color: rgb(226, 232, 240);
+    & input {
+        height: 25px;
+        background-color: rgb(226, 232, 240);
+    }
 }
 
 img.top-avatar {
@@ -129,18 +132,18 @@ img.top-avatar {
     gap: 15px;
     font-size: 20px;
     font-weight: bold;
-}
 
-.user-card .hello {
-    font-size: 11px;
-    margin-bottom: 7px;
-}
+    & .hello {
+        font-size: 11px;
+        margin-bottom: 7px;
+    }
 
-.user-card img {
-    width: 60px;
-    height: 60px;
-    border: 1px dashed black;
-    border-radius: 50%;
+    & img {
+        width: 60px;
+        height: 60px;
+        border: 1px dashed black;
+        border-radius: 50%;
+    }
 }
 
 button {
@@ -157,37 +160,39 @@ button {
     gap: 20px;
 }
 
+.section {
+    & .title {
+        font-weight: bold;
+    }
+
+    &>.title {
+        margin: 10px 0;
+        min-width: 200px;
+    }
+
+    & .card {
+        background-color: white;
+        border-radius: 10px;
+    }
+}
+
 .projects {
     grid-row: span 2;
-}
 
-.projects .content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
+    & .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
 
-.section>.title {
-    margin: 10px 0;
-    min-width: 200px;
-}
+    & .card {
+        height: 220px;
+        border-left: 10px solid rgb(240, 180, 41);
+    }
 
-.title {
-    font-weight: bold;
-}
-
-.card {
-    background-color: white;
-    border-radius: 10px;
-}
-
-.projects .card {
-    height: 220px;
-    border-left: 10px solid rgb(240, 180, 41);
-}
-
-.projects .card>* {
-    margin: 15px;
+    & .card>* {
+        margin: 15px;
+    }
 }
 
 .entry,
@@ -200,13 +205,13 @@ button {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 10px;
-}
 
-.trend img {
-    width: 40px;
-    height: 40px;
-    border: 1px dashed black;
-    border-radius: 50%;
+    & img {
+        width: 40px;
+        height: 40px;
+        border: 1px dashed black;
+        border-radius: 50%;
+    }
 }
 
 .line-clamp {
@@ -218,20 +223,20 @@ button {
 
 /* body>*>* {
     border: 1px solid red;
-}
 
-body>*>*>* {
-    border: 1px solid orange;
-}
+    &>* {
+        border: 1px solid orange;
+    }
 
-body>*>*>*>* {
-    border: 1px solid blue;
-}
+    &>*>* {
+        border: 1px solid blue;
+    }
 
-body>*>*>*>*>* {
-    border: 1px solid aqua;
-} 
+    &>*>*>* {
+        border: 1px solid aqua;
+    }
 
-body>*>*>*>*>*>* {
-    border: 1px solid yellow;
+    &>*>*>*>* {
+        border: 1px solid yellow;
+    }
 } */
