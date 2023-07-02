@@ -88,7 +88,7 @@ ul {
 }
 
 .shadow {
-    box-shadow: 5px 5px 5px rgb(210, 210, 210);
+    box-shadow: 3px 4px 5px rgb(210, 210, 210);
 }
 
 .header {
@@ -181,23 +181,34 @@ a.btn {
     padding: 20px;
     padding-right: 25px;
     display: grid;
-    grid-template: auto 1fr / 3fr 1fr;
+    grid-template: auto 1fr / 3fr minmax(250px, 1fr);
     gap: 20px;
 }
 
 .section {
+    color: grey; 
+
     & .title {
+        color: black;
         font-weight: bold;
+        margin-bottom: 3px;
     }
 
     &>.title {
+        font-size: 18px;
         margin: 10px 0;
         min-width: 200px;
     }
 
     & .card {
         background-color: white;
-        border-radius: 10px;
+        border-radius: 8px;
+    }
+
+    & .card-contents {
+        font-size: 14px;
+        line-height: 1.2;
+        padding: 15px;
     }
 }
 
@@ -220,22 +231,31 @@ a.btn {
     }
 }
 
-.entry,
-.trend {
-    padding: 15px;
+.entry {
+    margin: 15px;
+}
+
+.entry+.entry {
+    border-top: 2px solid rgb(226, 232, 240);
+    padding-top: 15px;
 }
 
 .trend {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    padding: 12px;
 
     & img {
         width: 40px;
         height: 40px;
         border: 1px dashed black;
         border-radius: 50%;
+    }
+
+    & .user-name {
+        color: black;
     }
 }
 
@@ -246,7 +266,7 @@ a.btn {
     -webkit-box-orient: vertical;
 }
 
-/* body>*>* {
+/* .main>*>*>* {
     border: 1px solid red;
 
     &>* {
