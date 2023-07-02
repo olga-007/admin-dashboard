@@ -20,9 +20,11 @@ a {
 
 body {
     font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
     height: 100vh;
     display: grid;
-    grid-template: auto 1fr / minmax(min-content, 1fr) 4fr;
+    grid-template: auto 1fr / minmax(min-content, 1fr) minmax(750px, 4fr);
+    background-color: rgb(226, 232, 240);
 }
 
 .sidebar {
@@ -85,76 +87,99 @@ ul {
     }
 }
 
+.shadow {
+    box-shadow: 5px 5px 5px rgb(210, 210, 210);
+}
+
 .header {
-    padding: 10px 20px;
+    padding: 8px 25px 8px 20px;
+    background-color: white;
 
     &>* {
-        padding: 10px 20px;
+        padding: 10px 30px 10px 20px;
         display: grid;
         grid-auto-flow: column;
         grid-template-columns: 1fr auto auto auto;
         justify-content: space-between;
         align-items: center;
-        gap: 20px;
+        gap: 25px;
     }
 }
 
-.top img {
-    width: 20px;
-    height: 20px;
-    border: 1px dashed black;
+.top {
+    margin-bottom: 10px;
+
+    & img,
+    & input[type=image] {
+        width: 24px;
+        height: 24px;
+    }
+
+    & img.avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    & .user-name {
+        font-size: 17px;
+        padding-right: 20px;
+        font-weight: bold;
+    }
 }
 
 .search-bar {
     display: grid;
-    grid-template-columns: auto clamp(300px, 70%, 600px);
+    grid-template-columns: auto clamp(400px, 75%, 750px);
     justify-content: start;
     align-items: center;
     gap: 10px;
 
-    & input {
-        height: 25px;
+    & input[type=text] {
+        font-size: 16px;
+        height: 30px;
+        padding: 0 14px;
         background-color: rgb(226, 232, 240);
+        border-radius: 15px;
+        border: none;
+        outline: none;
     }
-}
-
-img.top-avatar {
-    width: 40px;
-    height: 40px;
-    border: 1px dashed black;
-    border-radius: 50%;
 }
 
 .user-card {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    gap: 15px;
-    font-size: 20px;
+    gap: 20px;
+    font-size: 22px;
     font-weight: bold;
 
     & .hello {
-        font-size: 11px;
+        font-size: 12px;
         margin-bottom: 7px;
     }
 
     & img {
-        width: 60px;
-        height: 60px;
-        border: 1px dashed black;
+        width: 64px;
+        height: 64px;
         border-radius: 50%;
     }
 }
 
-button {
+a.btn {
+    font-size: 15px;
+    font-weight: bold;   
     color: white;
     background-color: rgb(25, 146, 212);
-    padding: 5px 10px;
+    border-radius: 20px;
+    line-height: 36px;
+    width: 95px;
+    text-align: center;
 }
 
 .main {
-    background-color: rgb(226, 232, 240);
     padding: 20px;
+    padding-right: 25px;
     display: grid;
     grid-template: auto 1fr / 3fr 1fr;
     gap: 20px;
@@ -225,18 +250,18 @@ button {
     border: 1px solid red;
 
     &>* {
-        border: 1px solid orange;
-    }
-
-    &>*>* {
         border: 1px solid blue;
     }
 
+    &>*>* {
+        border: 1px solid black;
+    }
+
     &>*>*>* {
-        border: 1px solid aqua;
+        border: 1px solid orange;
     }
 
     &>*>*>*>* {
-        border: 1px solid yellow;
+        border: 1px solid aqua;
     }
 } */

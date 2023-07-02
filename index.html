@@ -79,27 +79,28 @@
             </ul>
         </div>
     </div>
-    <div class="header">
+    <div class="header shadow">
         <div class="top">
-            <div class="search-bar">
-                <img />
-                <input type="text">
-            </div>
-            <img />
-            <img class="top-avatar" />
+            <form class="search-bar" action="" method="post"
+                onsubmit="alert('Your search would have been submitted now...'); return false;">
+                <input type="image" name="action" src="./assets/magnify.svg">
+                <input type="text" maxlength="100">
+            </form>
+            <img title="No notifications" src="./assets/bell-ring-outline.svg" />
+            <img class="avatar" title="Profile" src="./assets/current-user-avatar.jpeg" />
             <div class="user-name">Olga</div>
         </div>
         <div class="user">
             <div class="user-card">
-                <img />
+                <img src="./assets/current-user-avatar.jpeg" />
                 <div>
                     <div class="hello">Hi there,</div>
                     <div>Olga (@olga-007)</div>
                 </div>
             </div>
-            <button>New</button>
-            <button>Upload</button>
-            <button>Share</button>
+            <a class="btn" href="#">New</a>
+            <a class="btn" href="#">Upload</a>
+            <a class="btn" href="#">Share</a>
         </div>
     </div>
     <div class="main">
