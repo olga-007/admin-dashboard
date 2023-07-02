@@ -24,3 +24,9 @@ High-level styling. I made "Your Projects" section responsive, that's why it doe
 Sidebar and header styling.
 
 <img src="./versions/version3.png">
+
+
+## Version 4
+Announcements and Trending section styling.
+
+<img src="./versions/version4.png">
