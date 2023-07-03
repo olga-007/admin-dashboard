@@ -27,6 +27,12 @@ Sidebar and header styling.
 
 
 ## Version 4
-Announcements and Trending section styling.
+"Announcements" and "Trending" section styling.
 
 <img src="./versions/version4.png">
+
+
+## Version 5
+And finally, "Your Projects" section styling.
+
+<img src="./versions/version5.png">
