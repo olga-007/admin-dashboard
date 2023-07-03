@@ -80,20 +80,17 @@ ul {
     & a {
         transition: font-size .2s ease;
     }
-    
+
     & a:hover {
         font-size: 23px;
         transition: font-size .1s ease;
     }
 }
 
-.shadow {
-    box-shadow: 3px 4px 5px rgb(210, 210, 210);
-}
-
 .header {
     padding: 8px 25px 8px 20px;
     background-color: white;
+    box-shadow: 3px 4px 5px rgb(205, 205, 205);
 
     &>* {
         padding: 10px 30px 10px 20px;
@@ -155,7 +152,7 @@ ul {
     font-weight: bold;
 
     & .hello {
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 7px;
     }
 
@@ -168,7 +165,7 @@ ul {
 
 a.btn {
     font-size: 15px;
-    font-weight: bold;   
+    font-weight: bold;
     color: white;
     background-color: rgb(25, 146, 212);
     border-radius: 20px;
@@ -182,27 +179,28 @@ a.btn {
     padding-right: 25px;
     display: grid;
     grid-template: auto 1fr / 3fr minmax(250px, 1fr);
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 30px;
 }
 
 .section {
-    color: grey; 
+    color: rgb(115, 115, 115);
 
     & .title {
         color: black;
         font-weight: bold;
-        margin-bottom: 3px;
+        margin-bottom: 4px;
     }
 
     &>.title {
         font-size: 18px;
         margin: 10px 0;
-        min-width: 200px;
     }
 
     & .card {
         background-color: white;
         border-radius: 8px;
+        box-shadow: 3px 4px 5px rgb(210, 210, 210);
     }
 
     & .card-contents {
@@ -215,19 +213,41 @@ a.btn {
 .projects {
     grid-row: span 2;
 
-    & .content {
+    & .contents {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 25px;
     }
 
     & .card {
-        height: 220px;
-        border-left: 10px solid rgb(240, 180, 41);
+        height: 215px;
+        border-left: 8px solid rgb(240, 180, 41);
     }
 
-    & .card>* {
-        margin: 15px;
+    & .project-card-contents {
+        padding: 30px 15px 30px 20px;
+        font-size: 17px;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        gap: 10px;
+
+        & .title {
+            margin-bottom: 5px;
+        }
+
+        & .project-links {
+            padding: 0 10px;
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: end;
+            gap: 25px;
+        }
+
+        & img {
+            height: 24px;
+            width: 24px;
+        }
     }
 }
 
@@ -264,23 +284,3 @@ a.btn {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-
-/* .main>*>*>* {
-    border: 1px solid red;
-
-    &>* {
-        border: 1px solid blue;
-    }
-
-    &>*>* {
-        border: 1px solid black;
-    }
-
-    &>*>*>* {
-        border: 1px solid orange;
-    }
-
-    &>*>*>*>* {
-        border: 1px solid aqua;
-    }
-} */
