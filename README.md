@@ -17,7 +17,7 @@ High-level styling. I made "Your Projects" section responsive, that's why it doe
 
 <img src="./versions/version2a.png">
 
-<img width="60%" src="./versions/version2b.png">
+<img height="800px" src="./versions/version2b.png">
 
 
 ## Version 3
